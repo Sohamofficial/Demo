@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head> </head>
+<body>
+
+<canvas id="c" width="1000" height="1000"> </canvas>
+
+<script>
+var c = document.querySelector("#c");
+var ctx = c.getContext("2d");
+
+var image = new Image();
+
+image.onload = function() {
+    console.log("Loaded image");
+    ctx.drawImage(image, 4, 20 , c.width, c.height);
+    var savedImage = c.toDataURL();
+    window.open(savedImage);
+}
+
+
+image.src = "Cactus.jpeg";  
+
+</script>
+</body>
+</html>

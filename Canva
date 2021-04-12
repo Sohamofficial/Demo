@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+</head>
+<body>
+<canvas id="c" width="300" height="300"> </canvas>
+
+<img src="cactus.jpg.jpeg">
+
+<script>
+ var c = document.querySelector("#c");
+ var ctx = c.getContext("2d");
+
+ var image = new Image ();
+
+ Image.onload = function() {
+ console.log("Loaded image");
+ //doSomethingElse();
+ }
+
+ image.src = "cactus.jpg.jpeg";
+
+ </script>
+ </body>
+ </html>
